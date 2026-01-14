@@ -73,7 +73,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24"
     >
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
@@ -152,7 +152,6 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -346,13 +345,13 @@ export default function Hero() {
                     ],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-primary-500/40 bg-gradient-to-br from-primary-500/10 to-purple-500/10 backdrop-blur-sm"
+                  className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-primary-500/40 bg-black backdrop-blur-sm"
                   style={{
                     clipPath:
                       "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/10 via-transparent to-purple-600/10" />
                   <Image
                     src="/assets/img/profile2.png"
                     alt="Nimasha Gamage"

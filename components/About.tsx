@@ -57,54 +57,110 @@ export default function About() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="relative"
             >
-              <div className="relative w-full aspect-square max-w-sm sm:max-w-md mx-auto">
+              <div className="relative max-w-sm sm:max-w-md mx-auto">
+                {/* Animated Background Elements */}
                 <motion.div
-                  animate={{ rotate: 360 }}
+                  animate={{
+                    rotate: 360,
+                  }}
                   transition={{
-                    duration: 20,
+                    duration: 25,
                     repeat: Infinity,
                     ease: "linear",
                   }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 opacity-20 blur-3xl"
+                  className="absolute -inset-4 bg-gradient-to-r from-primary-500/10 via-purple-500/10 to-primary-500/10 blur-2xl"
                 />
-                <div className="relative glass-card rounded-2xl p-4 sm:p-6 md:p-8 h-full flex flex-col items-center justify-center">
-                  {/* Profile Image */}
-                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-primary-500/30">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 to-purple-600/30" />
-                    <Image
-                      src="/assets/img/profile2.png"
-                      alt="Nimasha Gamage"
-                      fill
-                      className="object-cover"
-                      sizes="192px"
-                    />
+
+                {/* Main Card */}
+                <div className="relative glass-card rounded-3xl p-6 sm:p-8 border-2 border-primary-500/20">
+                  {/* Profile Image Container */}
+                  <div className="relative mx-auto mb-6">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                      className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto"
+                    >
+                      {/* Animated Ring */}
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 15,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-primary-500 p-[2px]"
+                      >
+                        <div className="w-full h-full rounded-full bg-black" />
+                      </motion.div>
+
+                      {/* Image */}
+                      <div className="absolute inset-[2px] rounded-full overflow-hidden border-4 border-primary-500/30">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
+                        <Image
+                          src="/assets/img/profile2.png"
+                          alt="Nimasha Gamage"
+                          fill
+                          className="object-cover hover:scale-110 transition-transform duration-500"
+                          sizes="192px"
+                        />
+                      </div>
+                    </motion.div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-2 sm:mb-4">
-                      3+
-                    </div>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-300">
-                      Years of Experience
+
+                  {/* Name and Title */}
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                      Nimasha Gamage
+                    </h3>
+                    <p className="text-sm sm:text-base text-primary-400">
+                      Software Engineering Student
                     </p>
-                    <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-4 sm:mt-8">
-                      <div className="glass-card p-2 sm:p-3 md:p-4 rounded-lg">
-                        <div className="text-2xl sm:text-3xl font-bold text-primary-400">
-                          10+
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-400">
-                          Projects
-                        </p>
-                      </div>
-                      <div className="glass-card p-2 sm:p-3 md:p-4 rounded-lg">
-                        <div className="text-2xl sm:text-3xl font-bold text-primary-400">
-                          8+
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-400">
-                          Technologies
-                        </p>
-                      </div>
-                    </div>
                   </div>
+
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                    <motion.div
+                      whileHover={{ y: -5 }}
+                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
+                    >
+                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                        10+
+                      </div>
+                      <p className="text-[10px] sm:text-xs text-gray-400">
+                        Projects
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ y: -5 }}
+                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-purple-500/10 hover:border-purple-500/30 transition-all"
+                    >
+                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                        6
+                      </div>
+                      <p className="text-[10px] sm:text-xs text-gray-400">
+                        Months Intern
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ y: -5 }}
+                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
+                    >
+                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                        15+
+                      </div>
+                      <p className="text-[10px] sm:text-xs text-gray-400">
+                        Technologies
+                      </p>
+                    </motion.div>
+                  </div>
+
+                  {/* Decorative Corners */}
+                  <div className="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-primary-500/40 rounded-tl-xl" />
+                  <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-primary-500/40 rounded-tr-xl" />
+                  <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-purple-500/40 rounded-bl-xl" />
+                  <div className="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-purple-500/40 rounded-br-xl" />
                 </div>
               </div>
             </motion.div>
