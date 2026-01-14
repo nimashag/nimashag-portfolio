@@ -67,7 +67,7 @@ export default function About() {
                   }}
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 opacity-20 blur-3xl"
                 />
-                <div className="relative glass rounded-2xl p-8 h-full flex flex-col items-center justify-center">
+                <div className="relative glass-card rounded-2xl p-8 h-full flex flex-col items-center justify-center">
                   {/* Profile Image */}
                   <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-primary-500/30">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 to-purple-600/30" />
@@ -85,13 +85,13 @@ export default function About() {
                     </div>
                     <p className="text-xl text-gray-300">Years of Experience</p>
                     <div className="grid grid-cols-2 gap-4 mt-8">
-                      <div className="glass p-4 rounded-lg">
+                      <div className="glass-card p-4 rounded-lg">
                         <div className="text-3xl font-bold text-primary-400">
                           10+
                         </div>
                         <p className="text-sm text-gray-400">Projects</p>
                       </div>
-                      <div className="glass p-4 rounded-lg">
+                      <div className="glass-card p-4 rounded-lg">
                         <div className="text-3xl font-bold text-primary-400">
                           8+
                         </div>
@@ -144,7 +144,7 @@ export default function About() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-                    className="flex items-start gap-4 glass p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                    className="flex items-start gap-4 glass-card p-4 rounded-lg transition-colors duration-200"
                   >
                     <div className="p-2 bg-primary-600/20 rounded-lg">
                       <feature.icon className="text-primary-400" size={24} />

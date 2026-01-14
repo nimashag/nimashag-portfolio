@@ -129,7 +129,7 @@ export default function Hero() {
               }}
             >
               <motion.div
-                className="glass p-4 rounded-xl backdrop-blur-md border border-primary-500/30 hover:border-primary-500/60 transition-all group cursor-pointer"
+                className="glass-card p-4 rounded-xl backdrop-blur-md border border-primary-500/30 hover:border-primary-500/60 transition-all group cursor-pointer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <tech.Icon
@@ -157,7 +157,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6"
             >
               <Sparkles className="text-primary-400" size={16} />
               <span className="text-sm text-gray-300">
@@ -215,7 +215,10 @@ export default function Hero() {
               className="grid grid-cols-3 gap-4 mb-8 max-w-md mx-auto lg:mx-0"
             >
               {stats.map((stat, index) => (
-                <div key={index} className="glass p-4 rounded-xl text-center">
+                <div
+                  key={index}
+                  className="glass-card p-4 rounded-xl text-center"
+                >
                   <div className="text-2xl font-bold gradient-text">
                     {stat.value}
                   </div>

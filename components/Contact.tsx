@@ -75,7 +75,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 glass p-4 rounded-lg"
+                  className="flex items-start gap-4 glass-card p-4 rounded-lg"
                 >
                   <div className="p-3 bg-primary-600/20 rounded-lg">
                     <Mail className="text-primary-400" size={24} />
@@ -93,7 +93,7 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 glass p-4 rounded-lg"
+                  className="flex items-start gap-4 glass-card p-4 rounded-lg"
                 >
                   <div className="p-3 bg-primary-600/20 rounded-lg">
                     <MapPin className="text-primary-400" size={24} />
@@ -123,7 +123,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your Name"
                     required
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your Email"
                     required
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -145,7 +145,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Subject"
                     required
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -156,7 +156,7 @@ export default function Contact() {
                     placeholder="Your Message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200 resize-none"
                   />
                 </div>
                 <motion.button

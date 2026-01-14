@@ -66,7 +66,7 @@ export default function Articles() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5 }}
-                className="glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+                className="glass-card rounded-2xl p-6 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}

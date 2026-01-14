@@ -54,7 +54,7 @@ export default function Education() {
                 whileHover={{ scale: 1.02 }}
                 className="relative"
               >
-                <div className="glass rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="glass-card rounded-2xl p-8 transition-all duration-300">
                   <div className="flex flex-col md:flex-row items-center gap-6">
                     {/* Logo */}
                     <div className="relative">

@@ -100,7 +100,7 @@ export default function Skills() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="glass p-6 rounded-xl hover:bg-white/10 transition-all duration-300"
+                  className="glass-card p-6 rounded-xl transition-all duration-300"
                 >
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-lg font-semibold text-white">

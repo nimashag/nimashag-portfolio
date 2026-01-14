@@ -165,7 +165,7 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -10 }}
-                className="glass rounded-2xl overflow-hidden group cursor-pointer"
+                className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden bg-dark-800">
