@@ -132,15 +132,10 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
             >
-              Hello!, I'm{" "}
-              <span className="gradient-text inline-block">Nimasha</span>
-              {/* <motion.span
-                animate={{ rotate: [0, 14, -8, 14, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                className="inline-block ml-2"
-              >
-                👋
-              </motion.span> */}
+              <div>Hello!</div>
+              <div>
+                I'm <span className="gradient-text inline-block">Nimasha</span>
+              </div>
             </motion.h1>
 
             <div className="text-xl md:text-3xl text-gray-300 mb-6 h-20 flex items-center justify-center lg:justify-start">
@@ -198,6 +193,19 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
             >
               <motion.a
+                href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
+                download
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+              >
+                <FileDown size={20} />
+                <span>Download CV</span>
+              </motion.a>
+              <motion.a
                 href="#contact"
                 whileHover={{
                   scale: 1.05,
@@ -213,16 +221,6 @@ export default function Hero() {
                 >
                   →
                 </motion.span>
-              </motion.a>
-              <motion.a
-                href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
-                download
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 glass hover:bg-white/10 rounded-xl text-white font-semibold transition-all duration-200 flex items-center justify-center gap-2 border border-primary-500/30 hover:border-primary-500/60"
-              >
-                <FileDown size={20} />
-                <span>Download CV</span>
               </motion.a>
             </motion.div>
 
