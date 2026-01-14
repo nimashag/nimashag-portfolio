@@ -73,7 +73,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28"
     >
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
@@ -153,7 +153,7 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             {/* Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -163,7 +163,7 @@ export default function Hero() {
               <span className="text-sm text-gray-300">
                 Available for Internship
               </span>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -311,41 +311,81 @@ export default function Hero() {
           >
             {/* Decorative Elements */}
             <div className="relative w-96 h-96">
-              {/* Outer Ring */}
+              {/* Outer Hexagon Ring */}
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border-2 border-primary-500/20 border-dashed"
-              />
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <div className="w-full h-full border-2 border-primary-500/30 rounded-3xl rotate-45" />
+              </motion.div>
 
               {/* Middle Ring */}
               <motion.div
                 animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8 rounded-full border-2 border-purple-500/20 border-dashed"
-              />
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-8 flex items-center justify-center"
+              >
+                <div className="w-full h-full border-2 border-purple-500/20 rounded-2xl rotate-45" />
+              </motion.div>
 
-              {/* Center Glow */}
+              {/* Gradient Glow Orbs */}
               <motion.div
                 animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.3, 1],
+                  opacity: [0.2, 0.4, 0.2],
                 }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute inset-16 rounded-full bg-gradient-to-r from-primary-500/20 to-purple-500/20 blur-3xl"
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl"
+              />
+              <motion.div
+                animate={{
+                  scale: [1.3, 1, 1.3],
+                  opacity: [0.2, 0.4, 0.2],
+                }}
+                transition={{ duration: 4, repeat: Infinity, delay: 2 }}
+                className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"
               />
 
-              {/* Profile Image or Icon */}
-              <div className="absolute inset-20 rounded-full glass flex items-center justify-center overflow-hidden border-2 border-primary-500/30">
-                <div className="relative w-full h-full">
+              {/* Profile Image Container with Modern Border */}
+              <div className="absolute inset-16 flex items-center justify-center">
+                <motion.div
+                  animate={{
+                    boxShadow: [
+                      "0 0 20px rgba(14, 165, 233, 0.3)",
+                      "0 0 40px rgba(14, 165, 233, 0.5)",
+                      "0 0 20px rgba(14, 165, 233, 0.3)",
+                    ],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-primary-500/40 bg-gradient-to-br from-primary-500/10 to-purple-500/10 backdrop-blur-sm"
+                  style={{
+                    clipPath:
+                      "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
                   <Image
                     src="/assets/img/profile2.png"
                     alt="Nimasha Gamage"
                     fill
-                    className="object-cover"
+                    className="object-cover scale-110"
                     sizes="256px"
+                    priority
                   />
-                </div>
+                  {/* Shine effect */}
+                  <motion.div
+                    animate={{
+                      x: ["-100%", "200%"],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatDelay: 2,
+                    }}
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
+                  />
+                </motion.div>
               </div>
 
               {/* Tech Stack Orbits */}
