@@ -10,6 +10,26 @@ import {
   Code2,
   Sparkles,
 } from "lucide-react";
+import {
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiJavascript,
+  SiPython,
+  SiSpringboot,
+  SiMysql,
+  SiBootstrap,
+  SiHtml5,
+  SiCss3,
+  SiKotlin,
+  SiPhp,
+  SiC,
+  SiCplusplus,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import FloatingCube from "./3D/FloatingCube";
 import Image from "next/image";
 
@@ -24,19 +44,30 @@ export default function Hero() {
     { icon: Mail, href: "mailto:nimasha.piyumini@gmail.com", label: "Email" },
   ];
 
+  // Main technologies for floating display
   const technologies = [
-    { name: "React", icon: "⚛️", color: "#61DAFB" },
-    { name: "TypeScript", icon: "TS", color: "#3178C6" },
-    { name: "Node.js", icon: "🟢", color: "#339933" },
-    { name: "MongoDB", icon: "🍃", color: "#47A248" },
-    { name: "Next.js", icon: "▲", color: "#000000" },
-    { name: "Tailwind", icon: "🎨", color: "#06B6D4" },
+    { name: "React", Icon: SiReact, color: "#61DAFB" },
+    { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+    { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
+    { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+    { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
+    { name: "Tailwind", Icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+    { name: "Java", Icon: FaJava, color: "#007396" },
+  ];
+
+  // Tech stack for orbiting icons
+  const techStack = [
+    { name: "React", Icon: SiReact, color: "#61DAFB" },
+    { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
+    { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+    { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
   ];
 
   const stats = [
     { value: "10+", label: "Projects Completed" },
     { value: "3+", label: "Years Experience" },
-    { value: "8+", label: "Technologies" },
+    { value: "15+", label: "Technologies" },
   ];
 
   return (
@@ -76,6 +107,8 @@ export default function Hero() {
             { top: "70%", right: "12%" },
             { top: "40%", left: "15%" },
             { top: "45%", right: "18%" },
+            { top: "35%", left: "5%" },
+            { top: "55%", right: "8%" },
           ];
 
           return (
@@ -85,7 +118,7 @@ export default function Hero() {
               style={positions[index]}
               initial={{ opacity: 0, scale: 0 }}
               animate={{
-                opacity: [0.4, 0.8, 0.4],
+                opacity: [0.5, 1, 0.5],
                 scale: [1, 1.2, 1],
                 y: [0, -20, 0],
               }}
@@ -95,9 +128,15 @@ export default function Hero() {
                 delay: index * 0.2,
               }}
             >
-              <div className="glass p-3 rounded-xl backdrop-blur-md border border-primary-500/30 hover:border-primary-500/60 transition-all">
-                <span className="text-2xl">{tech.icon}</span>
-              </div>
+              <motion.div
+                className="glass p-4 rounded-xl backdrop-blur-md border border-primary-500/30 hover:border-primary-500/60 transition-all group cursor-pointer"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
+                <tech.Icon
+                  className="text-3xl group-hover:scale-110 transition-transform"
+                  style={{ color: tech.color }}
+                />
+              </motion.div>
             </motion.div>
           );
         })}
@@ -302,28 +341,37 @@ export default function Hero() {
               </div>
 
               {/* Tech Stack Orbits */}
-              {technologies.slice(0, 4).map((tech, index) => {
+              {techStack.map((tech, index) => {
                 const angle = (index / 4) * Math.PI * 2;
                 const radius = 180;
                 return (
                   <motion.div
                     key={index}
-                    className="absolute w-16 h-16 glass rounded-xl flex items-center justify-center border border-primary-500/30"
+                    className="absolute w-20 h-20 glass rounded-xl flex items-center justify-center border-2 border-primary-500/30 backdrop-blur-md group"
                     style={{
-                      left: `calc(50% + ${Math.cos(angle) * radius}px - 2rem)`,
-                      top: `calc(50% + ${Math.sin(angle) * radius}px - 2rem)`,
+                      left: `calc(50% + ${
+                        Math.cos(angle) * radius
+                      }px - 2.5rem)`,
+                      top: `calc(50% + ${Math.sin(angle) * radius}px - 2.5rem)`,
                     }}
                     animate={{
-                      y: [0, -10, 0],
+                      y: [0, -15, 0],
                     }}
                     transition={{
                       duration: 2 + index * 0.5,
                       repeat: Infinity,
                       delay: index * 0.2,
                     }}
-                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    whileHover={{
+                      scale: 1.3,
+                      rotate: 360,
+                      borderColor: tech.color,
+                    }}
                   >
-                    <span className="text-2xl">{tech.icon}</span>
+                    <tech.Icon
+                      className="text-4xl group-hover:scale-110 transition-transform"
+                      style={{ color: tech.color }}
+                    />
                   </motion.div>
                 );
               })}
