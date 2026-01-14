@@ -81,11 +81,11 @@ export default function Hero() {
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 via-dark-900/50 to-dark-900 z-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/20 via-transparent to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/10 via-transparent to-transparent z-10" />
 
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 z-10 opacity-20">
+      <div className="absolute inset-0 z-10 opacity-10">
         <div
           className="absolute inset-0"
           style={{
