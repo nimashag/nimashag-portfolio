@@ -98,17 +98,18 @@ export default function Hero() {
       </div>
 
       {/* Floating Tech Icons */}
-      <div className="absolute inset-0 z-10">
+      <div className="absolute inset-0 z-10 pointer-events-none">
         {technologies.map((tech, index) => {
+          // Create a balanced spread pattern
           const positions = [
-            { top: "15%", left: "10%" },
-            { top: "25%", right: "15%" },
-            { top: "60%", left: "8%" },
-            { top: "70%", right: "12%" },
-            { top: "40%", left: "15%" },
-            { top: "45%", right: "18%" },
-            { top: "35%", left: "5%" },
-            { top: "55%", right: "8%" },
+            { top: "12%", left: "8%" },
+            { top: "22%", right: "10%" },
+            { top: "50%", left: "5%" },
+            { top: "65%", right: "15%" },
+            { top: "38%", left: "10%" },
+            { top: "82%", right: "8%" },
+            { top: "28%", left: "3%" },
+            { top: "72%", right: "5%" },
           ];
 
           return (
@@ -116,26 +117,51 @@ export default function Hero() {
               key={index}
               className="absolute hidden lg:block"
               style={positions[index]}
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{
-                opacity: [0.5, 1, 0.5],
-                scale: [1, 1.2, 1],
-                y: [0, -20, 0],
+                opacity: 0.4,
+                scale: 1,
               }}
               transition={{
-                duration: 3 + index * 0.5,
-                repeat: Infinity,
-                delay: index * 0.2,
+                duration: 0.6,
+                delay: index * 0.15,
               }}
             >
               <motion.div
-                className="glass-card p-4 rounded-xl backdrop-blur-md border border-primary-500/30 hover:border-primary-500/60 transition-all group cursor-pointer"
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                animate={{
+                  y: [0, -8, 0],
+                  rotate: [0, 2, -2, 0],
+                }}
+                transition={{
+                  duration: 4 + index * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.2,
+                }}
+                className="relative group pointer-events-auto"
               >
-                <tech.Icon
-                  className="text-3xl group-hover:scale-110 transition-transform"
-                  style={{ color: tech.color }}
+                {/* Glow effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"
+                  style={{ backgroundColor: tech.color }}
                 />
+
+                {/* Icon container */}
+                <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-3 group-hover:border-primary-400/50 transition-all duration-300">
+                  <tech.Icon
+                    className="text-2xl transition-all duration-300 group-hover:scale-125"
+                    style={{ color: tech.color }}
+                  />
+                </div>
+
+                {/* Tech name on hover */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileHover={{ opacity: 1, y: 0 }}
+                  className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs text-gray-300 bg-black/80 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  {tech.name}
+                </motion.div>
               </motion.div>
             </motion.div>
           );
@@ -298,40 +324,89 @@ export default function Hero() {
           >
             {/* Decorative Elements */}
             <div className="relative w-96 h-96">
-              {/* Outer Hexagon Ring */}
+              {/* Outer Rotating Ring with Gradient */}
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="w-full h-full border-2 border-primary-500/30 rounded-3xl rotate-45" />
-              </motion.div>
-
-              {/* Middle Ring */}
-              <motion.div
-                animate={{ rotate: -360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8 flex items-center justify-center"
-              >
-                <div className="w-full h-full border-2 border-purple-500/20 rounded-2xl rotate-45" />
-              </motion.div>
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, transparent 0%, rgba(14, 165, 233, 0.3) 25%, transparent 50%, rgba(139, 92, 246, 0.3) 75%, transparent 100%)",
+                }}
+              />
 
-              {/* Gradient Glow Orbs */}
+              {/* Inner Ring */}
               <motion.div
                 animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.2, 0.4, 0.2],
+                  rotate: -360,
+                }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-4 rounded-full border-2 border-primary-500/20"
+              />
+
+              {/* Middle Pulsing Circle */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.05, 1],
+                  opacity: [0.3, 0.5, 0.3],
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute inset-8 rounded-full border border-primary-400/30"
+              />
+
+              {/* Orbital Dots */}
+              {[0, 120, 240].map((angle, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-primary-400 to-purple-400"
+                  style={{
+                    top: "50%",
+                    left: "50%",
+                  }}
+                  animate={{
+                    rotate: 360,
+                    x: -6,
+                    y: -6,
+                  }}
+                  transition={{
+                    rotate: {
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                      delay: i * 0.3,
+                    },
+                  }}
+                >
+                  <motion.div
+                    animate={{
+                      x: Math.cos((angle * Math.PI) / 180) * 180,
+                      y: Math.sin((angle * Math.PI) / 180) * 180,
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                      delay: i * 0.3,
+                    }}
+                    className="w-full h-full rounded-full shadow-lg shadow-primary-500/50"
+                  />
+                </motion.div>
+              ))}
+
+              {/* Subtle Grid Lines */}
+              <div className="absolute inset-12 rounded-full opacity-20">
+                <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent" />
+                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary-400 to-transparent" />
+              </div>
+
+              {/* Ambient Glow */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.1, 0.2, 0.1],
                 }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl"
-              />
-              <motion.div
-                animate={{
-                  scale: [1.3, 1, 1.3],
-                  opacity: [0.2, 0.4, 0.2],
-                }}
-                transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-                className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"
+                className="absolute inset-16 bg-gradient-to-br from-primary-500/20 via-purple-500/10 to-primary-500/20 rounded-full blur-xl"
               />
 
               {/* Profile Image Container with Modern Border */}
@@ -345,13 +420,9 @@ export default function Hero() {
                     ],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-primary-500/40 bg-black backdrop-blur-sm"
-                  style={{
-                    clipPath:
-                      "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-                  }}
+                  className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-500/40 bg-gradient-to-br from-primary-900/60 via-purple-900/60 to-primary-900/60 backdrop-blur-sm"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/10 via-transparent to-purple-600/10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-700/15 via-purple-700/15 to-primary-700/15" />
                   <Image
                     src="/assets/img/profile2.png"
                     alt="Nimasha Gamage"
@@ -382,15 +453,17 @@ export default function Hero() {
                 return (
                   <motion.div
                     key={index}
-                    className="absolute w-20 h-20 glass rounded-xl flex items-center justify-center border-2 border-primary-500/30 backdrop-blur-md group"
+                    className="absolute w-14 h-14 glass rounded-lg flex items-center justify-center border border-primary-500/30 backdrop-blur-md group"
                     style={{
                       left: `calc(50% + ${
                         Math.cos(angle) * radius
-                      }px - 2.5rem)`,
-                      top: `calc(50% + ${Math.sin(angle) * radius}px - 2.5rem)`,
+                      }px - 1.75rem)`,
+                      top: `calc(50% + ${
+                        Math.sin(angle) * radius
+                      }px - 1.75rem)`,
                     }}
                     animate={{
-                      y: [0, -15, 0],
+                      y: [0, -10, 0],
                     }}
                     transition={{
                       duration: 2 + index * 0.5,
@@ -398,13 +471,13 @@ export default function Hero() {
                       delay: index * 0.2,
                     }}
                     whileHover={{
-                      scale: 1.3,
+                      scale: 1.2,
                       rotate: 360,
                       borderColor: tech.color,
                     }}
                   >
                     <tech.Icon
-                      className="text-4xl group-hover:scale-110 transition-transform"
+                      className="text-2xl group-hover:scale-110 transition-transform"
                       style={{ color: tech.color }}
                     />
                   </motion.div>
