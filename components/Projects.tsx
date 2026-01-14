@@ -119,7 +119,10 @@ export default function Projects() {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section
+      id="projects"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -127,20 +130,20 @@ export default function Projects() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
             My <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto mb-12" />
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setFilter(category)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-4 sm:px-5 md:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300 ${
                   filter === category
                     ? "bg-primary-600 text-white shadow-lg shadow-primary-600/50"
                     : "glass text-gray-300 hover:bg-white/10"
@@ -154,7 +157,7 @@ export default function Projects() {
           {/* Projects Grid */}
           <motion.div
             layout
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -186,11 +189,11 @@ export default function Projects() {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-200">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
                     {project.description}
                   </p>
 

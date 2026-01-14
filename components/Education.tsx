@@ -31,7 +31,10 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section
+      id="education"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -39,10 +42,10 @@ export default function Education() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
             My <span className="gradient-text">Education</span>
           </h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto mb-12" />
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
           <div className="space-y-8">
             {education.map((edu, index) => (
@@ -54,10 +57,10 @@ export default function Education() {
                 whileHover={{ scale: 1.02 }}
                 className="relative"
               >
-                <div className="glass-card rounded-2xl p-8 transition-all duration-300">
-                  <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="glass-card rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300">
+                  <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
                     {/* Logo */}
-                    <div className="relative">
+                    <div className="relative flex-shrink-0">
                       <motion.div
                         animate={{ rotate: 360 }}
                         transition={{
@@ -67,7 +70,7 @@ export default function Education() {
                         }}
                         className={`absolute inset-0 rounded-full bg-gradient-to-r ${edu.color} opacity-30 blur-xl`}
                       />
-                      <div className="relative w-24 h-24 glass rounded-full flex items-center justify-center p-2 overflow-hidden">
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 glass rounded-full flex items-center justify-center p-2 overflow-hidden">
                         <Image
                           src={edu.logo}
                           alt={edu.institution}
@@ -80,13 +83,13 @@ export default function Education() {
 
                     {/* Content */}
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-2xl font-bold text-white mb-2">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
                         {edu.institution}
                       </h3>
-                      <p className="text-primary-400 text-lg mb-2">
+                      <p className="text-primary-400 text-sm sm:text-base md:text-lg mb-2">
                         {edu.degree}
                       </p>
-                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
+                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-sm sm:text-base">
                         <Calendar size={16} />
                         <span>{edu.period}</span>
                       </div>

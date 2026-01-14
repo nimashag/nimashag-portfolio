@@ -39,7 +39,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section
+      id="contact"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -47,24 +50,24 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto mb-12" />
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                   Let's talk about everything!
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-sm sm:text-base text-gray-400">
                   Feel free to reach out for collaborations, opportunities, or
                   just a friendly chat. I'm always excited to connect with
                   fellow developers and tech enthusiasts!

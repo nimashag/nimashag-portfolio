@@ -42,7 +42,10 @@ export default function Articles() {
   });
 
   return (
-    <section id="articles" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section
+      id="articles"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -50,12 +53,12 @@ export default function Articles() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
             My <span className="gradient-text">Articles</span>
           </h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto mb-12" />
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {articles.map((article, index) => (
               <motion.a
                 key={index}
@@ -66,18 +69,18 @@ export default function Articles() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -5 }}
-                className="glass-card rounded-2xl p-6 transition-all duration-300 group"
+                className="glass-card rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-300 group"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3 sm:gap-4">
                   {/* Icon */}
-                  <div className="p-3 bg-primary-600/20 rounded-lg group-hover:bg-primary-600/30 transition-colors duration-200">
-                    <BookOpen className="text-primary-400" size={24} />
+                  <div className="p-2 sm:p-3 bg-primary-600/20 rounded-lg group-hover:bg-primary-600/30 transition-colors duration-200 flex-shrink-0">
+                    <BookOpen className="text-primary-400" size={20} />
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="text-lg font-bold text-white group-hover:text-primary-400 transition-colors duration-200">
+                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-primary-400 transition-colors duration-200 leading-tight">
                         {article.title}
                       </h3>
                       <ExternalLink

@@ -169,7 +169,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
             >
               <div>Hello!</div>
               <div>
@@ -177,8 +177,11 @@ export default function Hero() {
               </div>
             </motion.h1>
 
-            <div className="text-xl md:text-3xl text-gray-300 mb-6 h-20 flex items-center justify-center lg:justify-start">
-              <Code2 className="text-primary-400 mr-3" size={28} />
+            <div className="text-lg sm:text-xl md:text-3xl text-gray-300 mb-6 min-h-[60px] sm:min-h-[80px] flex items-center justify-center lg:justify-start">
+              <Code2
+                className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0"
+                size={24}
+              />
               <TypeAnimation
                 sequence={[
                   "Full Stack Developer",
@@ -200,7 +203,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
             >
               Passionate Software Engineering student at SLIIT, specializing in
               building scalable web and mobile applications with modern
@@ -212,17 +215,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-4 mb-8 max-w-md mx-auto lg:mx-0"
+              className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0"
             >
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="glass-card p-4 rounded-xl text-center"
+                  className="glass-card p-3 sm:p-4 rounded-xl text-center"
                 >
-                  <div className="text-2xl font-bold gradient-text">
+                  <div className="text-xl sm:text-2xl font-bold gradient-text">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
+                  <div className="text-[10px] sm:text-xs text-gray-400 mt-1">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </motion.div>
@@ -232,7 +237,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"
             >
               <motion.a
                 href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
@@ -242,9 +247,9 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
-                <FileDown size={20} />
+                <FileDown size={18} />
                 <span>Download CV</span>
               </motion.a>
               <motion.a
@@ -254,7 +259,7 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
                 <span>Get In Touch</span>
                 <motion.span

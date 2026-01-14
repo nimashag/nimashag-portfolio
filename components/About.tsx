@@ -35,7 +35,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -44,10 +44,10 @@ export default function About() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto mb-12" />
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Image and Stats */}
@@ -57,7 +57,7 @@ export default function About() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="relative"
             >
-              <div className="relative w-full aspect-square max-w-md mx-auto">
+              <div className="relative w-full aspect-square max-w-sm sm:max-w-md mx-auto">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{
@@ -67,9 +67,9 @@ export default function About() {
                   }}
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 opacity-20 blur-3xl"
                 />
-                <div className="relative glass-card rounded-2xl p-8 h-full flex flex-col items-center justify-center">
+                <div className="relative glass-card rounded-2xl p-4 sm:p-6 md:p-8 h-full flex flex-col items-center justify-center">
                   {/* Profile Image */}
-                  <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-primary-500/30">
+                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-primary-500/30">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 to-purple-600/30" />
                     <Image
                       src="/assets/img/profile2.png"
@@ -80,22 +80,28 @@ export default function About() {
                     />
                   </div>
                   <div className="text-center">
-                    <div className="text-6xl font-bold gradient-text mb-4">
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-2 sm:mb-4">
                       3+
                     </div>
-                    <p className="text-xl text-gray-300">Years of Experience</p>
-                    <div className="grid grid-cols-2 gap-4 mt-8">
-                      <div className="glass-card p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-primary-400">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-300">
+                      Years of Experience
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-4 sm:mt-8">
+                      <div className="glass-card p-2 sm:p-3 md:p-4 rounded-lg">
+                        <div className="text-2xl sm:text-3xl font-bold text-primary-400">
                           10+
                         </div>
-                        <p className="text-sm text-gray-400">Projects</p>
+                        <p className="text-xs sm:text-sm text-gray-400">
+                          Projects
+                        </p>
                       </div>
-                      <div className="glass-card p-4 rounded-lg">
-                        <div className="text-3xl font-bold text-primary-400">
+                      <div className="glass-card p-2 sm:p-3 md:p-4 rounded-lg">
+                        <div className="text-2xl sm:text-3xl font-bold text-primary-400">
                           8+
                         </div>
-                        <p className="text-sm text-gray-400">Technologies</p>
+                        <p className="text-xs sm:text-sm text-gray-400">
+                          Technologies
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -108,9 +114,9 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 I'm{" "}
                 <span className="text-primary-400 font-semibold">
                   Nimasha Gamage
@@ -121,14 +127,14 @@ export default function About() {
                 software solutions and continuously advancing my skills in
                 coding, problem-solving, and project management.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 Currently, I am seeking an internship where I can contribute to
                 meaningful projects, collaborate with talented professionals,
                 and gain hands-on experience in the tech industry. I am eager to
                 refine my technical expertise while immersing myself in dynamic,
                 team-oriented environments that foster growth and innovation.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 My long-term goal is to become a versatile developer who creates
                 solutions that not only drive technological innovation but also
                 make a positive impact on society. With a mindset grounded in
