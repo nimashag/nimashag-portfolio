@@ -152,18 +152,6 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            {/* Badge */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6"
-            >
-              <Sparkles className="text-primary-400" size={16} />
-              <span className="text-sm text-gray-300">
-                Available for Internship
-              </span>
-            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
