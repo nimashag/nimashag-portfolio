@@ -61,15 +61,28 @@ export default function Education() {
                   <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-8">
                     {/* Logo */}
                     <div className="relative flex-shrink-0">
-                      {/* Logo container with black background */}
-                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-black rounded-xl flex items-center justify-center p-4 overflow-hidden">
-                        <Image
-                          src={edu.logo}
-                          alt={edu.institution}
-                          width={96}
-                          height={96}
-                          className="object-contain"
-                        />
+                      <div className="relative group">
+                        {/* Subtle glow effect */}
+                        <div
+                          className={`absolute -inset-1 bg-gradient-to-r ${edu.color} opacity-20 rounded-2xl blur-md group-hover:opacity-70 transition duration-300`}
+                        ></div>
+
+                        {/* Logo container */}
+                        <div
+                          className={`relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-gray-900 to-black rounded-2xl flex items-center justify-center p-4 border ${
+                            index === 0
+                              ? "border-blue-500/20 group-hover:border-blue-500/40"
+                              : "border-purple-500/20 group-hover:border-purple-500/40"
+                          } transition-all duration-300`}
+                        >
+                          <Image
+                            src={edu.logo}
+                            alt={edu.institution}
+                            width={96}
+                            height={96}
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
 
