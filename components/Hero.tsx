@@ -2,13 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  FileDown,
-  Code2,
-} from "lucide-react";
+import { Github, Linkedin, Mail, FileDown, Code2 } from "lucide-react";
 import {
   SiReact,
   SiTypescript,
@@ -293,7 +287,8 @@ export default function Hero() {
             >
               <div>Hello!</div>
               <div>
-                I&apos;m <span className="gradient-text inline-block">Nimasha</span>
+                I&apos;m{" "}
+                <span className="gradient-text inline-block">Nimasha</span>
               </div>
             </motion.h1>
 

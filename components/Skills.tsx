@@ -33,7 +33,13 @@ import {
 } from "lucide-react";
 
 // Custom Ballerina Icon Component
-const BallerinaIcon = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
+const BallerinaIcon = ({
+  className,
+  style,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+}) => (
   <div className={className} style={style}>
     <Image
       src="/assets/img/ballerina-logo.png"
