@@ -79,7 +79,7 @@ const projects = [
     title: "Avenga Hotels",
     description:
       "A hotel reservation system for special events, offering features to manage users, display event venues, make reservations, and process payments.",
-    image: "/assets/img/avenga1.png",
+    image: "/assets/img/avenga2.png",
     tech: ["PHP", "MySQL", "HTML", "CSS"],
     github: "https://github.com/nimashag/hotel-avenga",
     category: "Web",
@@ -168,65 +168,57 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -10 }}
-                className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+                className="glass-card rounded-3xl overflow-hidden group cursor-pointer relative border-2 border-primary-500/40 shadow-[0_8px_40px_rgba(59,130,246,0.2)] transition-all duration-300"
               >
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden bg-dark-800">
+                <div className="relative h-52 sm:h-56 md:h-60 overflow-hidden bg-dark-800">
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.4 }}
                     className="w-full h-full relative"
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-60" />
                 </div>
 
                 {/* Project Content */}
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-primary-600/20 text-primary-400 text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <span className="px-3 py-1 bg-purple-600/20 text-purple-400 text-xs rounded-full">
-                        +{project.tech.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
+                <div className="p-5 sm:p-6">
+                  {/* Title with GitHub Icon */}
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white text-center group-hover:text-primary-400 transition-colors duration-200">
+                      {project.title}
+                    </h3>
                     <motion.a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.15, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
-                      className="flex items-center gap-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-900/90 backdrop-blur-md flex items-center justify-center border-2 border-primary-500/50 hover:border-primary-400 hover:bg-primary-600/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-200 shadow-xl flex-shrink-0"
                     >
-                      <Github size={18} />
-                      <span className="text-sm">Code</span>
+                      <Github size={18} className="text-white" />
                     </motion.a>
+                  </div>
+                  <p className="text-gray-400 text-sm mb-5 leading-relaxed text-center line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1.5 bg-primary-600/20 text-primary-400 text-xs font-medium rounded-full border border-primary-600/30 hover:bg-primary-600/30 hover:border-primary-600/50 transition-all duration-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
@@ -235,7 +227,7 @@ export default function Projects() {
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="h-1 bg-gradient-to-r from-primary-600 to-purple-600 origin-left"
+                  className="h-1 bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 origin-left"
                 />
               </motion.div>
             ))}
