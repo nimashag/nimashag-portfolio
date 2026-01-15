@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { GraduationCap, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Image from "next/image";
 
 export default function Education() {

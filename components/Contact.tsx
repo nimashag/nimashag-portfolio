@@ -65,11 +65,11 @@ export default function Contact() {
             >
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-                  Let's talk about everything!
+                  Let&apos;s talk about everything!
                 </h3>
                 <p className="text-sm sm:text-base text-gray-400">
                   Feel free to reach out for collaborations, opportunities, or
-                  just a friendly chat. I'm always excited to connect with
+                  just a friendly chat. I&apos;m always excited to connect with
                   fellow developers and tech enthusiasts!
                 </p>
               </div>

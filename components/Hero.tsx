@@ -8,7 +8,6 @@ import {
   Mail,
   FileDown,
   Code2,
-  Sparkles,
 } from "lucide-react";
 import {
   SiReact,
@@ -18,16 +17,6 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
-  SiPython,
-  SiSpringboot,
-  SiMysql,
-  SiBootstrap,
-  SiHtml5,
-  SiCss3,
-  SiKotlin,
-  SiPhp,
-  SiC,
-  SiCplusplus,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import FloatingCube from "./3D/FloatingCube";
@@ -304,7 +293,7 @@ export default function Hero() {
             >
               <div>Hello!</div>
               <div>
-                I'm <span className="gradient-text inline-block">Nimasha</span>
+                I&apos;m <span className="gradient-text inline-block">Nimasha</span>
               </div>
             </motion.h1>
 

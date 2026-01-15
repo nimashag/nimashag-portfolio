@@ -173,7 +173,7 @@ export default function About() {
               className="space-y-4 sm:space-y-6"
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                I'm{" "}
+                I&apos;m{" "}
                 <span className="text-primary-400 font-semibold">
                   Nimasha Gamage
                 </span>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
