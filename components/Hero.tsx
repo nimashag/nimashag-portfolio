@@ -168,6 +168,66 @@ export default function Hero() {
         })}
       </div>
 
+      {/* Floating Tech Icons - Mobile View */}
+      <div className="absolute inset-0 z-10 pointer-events-none lg:hidden">
+        {technologies.slice(0, 6).map((tech, index) => {
+          // Mobile-optimized positions - fewer icons, better spacing
+          const mobilePositions = [
+            { top: "15%", left: "5%" },
+            { top: "20%", right: "5%" },
+            { top: "45%", left: "3%" },
+            { top: "50%", right: "3%" },
+            { top: "75%", left: "5%" },
+            { top: "80%", right: "5%" },
+          ];
+
+          return (
+            <motion.div
+              key={`mobile-${index}`}
+              className="absolute"
+              style={mobilePositions[index]}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{
+                opacity: 0.3,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+              }}
+            >
+              <motion.div
+                animate={{
+                  y: [0, -6, 0],
+                  rotate: [0, 3, -3, 0],
+                }}
+                transition={{
+                  duration: 3 + index * 0.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.2,
+                }}
+                className="relative pointer-events-none"
+              >
+                {/* Glow effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-lg blur-lg opacity-30"
+                  style={{ backgroundColor: tech.color }}
+                />
+
+                {/* Icon container */}
+                <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-2">
+                  <tech.Icon
+                    className="text-lg"
+                    style={{ color: tech.color }}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          );
+        })}
+      </div>
+
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Profile Image */}
