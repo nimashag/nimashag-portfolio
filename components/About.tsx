@@ -44,7 +44,7 @@ export default function About() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
@@ -109,7 +109,7 @@ export default function About() {
 
                   {/* Name and Title */}
                   <div className="text-center mb-6">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-1">
                       Nimasha Gamage
                     </h3>
                     <p className="text-sm sm:text-base text-primary-400">
@@ -123,7 +123,7 @@ export default function About() {
                       whileHover={{ y: -5 }}
                       className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
                     >
-                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold gradient-text mb-1">
                         10+
                       </div>
                       <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
@@ -135,7 +135,7 @@ export default function About() {
                       whileHover={{ y: -5 }}
                       className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-purple-500/10 hover:border-purple-500/30 transition-all"
                     >
-                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold gradient-text mb-1">
                         6
                       </div>
                       <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
@@ -147,7 +147,7 @@ export default function About() {
                       whileHover={{ y: -5 }}
                       className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
                     >
-                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold gradient-text mb-1">
                         15+
                       </div>
                       <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
@@ -212,10 +212,10 @@ export default function About() {
                       <feature.icon className="text-primary-400" size={24} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">
+                      <h3 className="text-base font-semibold text-white mb-1">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 text-sm">
+                      <p className="text-gray-400 text-xs">
                         {feature.description}
                       </p>
                     </div>

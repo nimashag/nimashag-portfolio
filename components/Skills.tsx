@@ -127,7 +127,7 @@ export default function Skills() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">
             Technical <span className="gradient-text">Exposure</span>
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />

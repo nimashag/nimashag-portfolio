@@ -42,7 +42,7 @@ export default function Experience() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">
             Work <span className="gradient-text">Experience</span>
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
@@ -116,7 +116,7 @@ export default function Experience() {
                       {/* Header */}
                       <div className="space-y-2">
                         <div className="flex items-start justify-between gap-4">
-                          <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                          <h3 className="text-lg sm:text-xl font-bold text-white">
                             {exp.company}
                           </h3>
                           <motion.div
@@ -127,7 +127,7 @@ export default function Experience() {
                             <Briefcase className="text-primary-400" size={24} />
                           </motion.div>
                         </div>
-                        <p className="text-lg sm:text-xl text-primary-400 font-semibold">
+                        <p className="text-base sm:text-lg text-primary-400 font-semibold">
                           {exp.position}
                         </p>
                       </div>
@@ -139,7 +139,7 @@ export default function Experience() {
 
                       {/* Achievements */}
                       <div className="space-y-3">
-                        <h4 className="text-lg font-semibold text-white flex items-center gap-2">
+                        <h4 className="text-base font-semibold text-white flex items-center gap-2">
                           <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-purple-500 rounded-full" />
                           Key Achievements
                         </h4>
@@ -159,7 +159,7 @@ export default function Experience() {
                                 className="text-primary-400 flex-shrink-0 mt-0.5"
                                 size={18}
                               />
-                              <p className="text-gray-300 text-sm">
+                              <p className="text-gray-300 text-xs">
                                 {achievement}
                               </p>
                             </motion.div>

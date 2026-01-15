@@ -283,7 +283,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
             >
               <div>Hello!</div>
               <div>
@@ -292,7 +292,7 @@ export default function Hero() {
               </div>
             </motion.h1>
 
-            <div className="text-lg sm:text-xl md:text-3xl text-gray-300 mb-6 min-h-[60px] sm:min-h-[80px] flex items-center justify-center lg:justify-start">
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 min-h-[60px] sm:min-h-[80px] flex items-center justify-center lg:justify-start">
               <Code2
                 className="text-primary-400 mr-2 sm:mr-3 flex-shrink-0"
                 size={24}
@@ -318,7 +318,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-sm sm:text-base md:text-lg text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
+              className="text-xs sm:text-sm md:text-sm text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
             >
               Passionate Software Engineering student at SLIIT, specializing in
               building scalable web and mobile applications with modern
@@ -337,7 +337,7 @@ export default function Hero() {
                   key={index}
                   className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center"
                 >
-                  <div className="text-base sm:text-xl md:text-2xl font-bold gradient-text">
+                  <div className="text-sm sm:text-lg md:text-xl font-bold gradient-text">
                     {stat.value}
                   </div>
                   <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 mt-1 leading-tight">
@@ -362,7 +362,7 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
                 <FileDown size={18} className="flex-shrink-0" />
                 <span>Download CV</span>
@@ -374,7 +374,7 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="group px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
                 <span>Get In Touch</span>
                 <motion.span

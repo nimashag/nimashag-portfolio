@@ -130,7 +130,7 @@ export default function Projects() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">
             My <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
@@ -191,7 +191,7 @@ export default function Projects() {
                 <div className="p-5 sm:p-6">
                   {/* Title with GitHub Icon */}
                   <div className="flex items-center justify-center gap-3 mb-3">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white text-center group-hover:text-primary-400 transition-colors duration-200">
+                    <h3 className="text-base sm:text-lg font-bold text-white text-center group-hover:text-primary-400 transition-colors duration-200">
                       {project.title}
                     </h3>
                     <motion.a

@@ -42,7 +42,7 @@ export default function Education() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">
             My <span className="gradient-text">Education</span>
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
@@ -88,13 +88,13 @@ export default function Education() {
 
                     {/* Content */}
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
+                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-white mb-2">
                         {edu.institution}
                       </h3>
-                      <p className="text-primary-400 text-sm sm:text-base md:text-lg mb-2">
+                      <p className="text-primary-400 text-xs sm:text-sm md:text-base mb-2">
                         {edu.degree}
                       </p>
-                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-sm sm:text-base">
+                      <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-xs sm:text-sm">
                         <Calendar size={16} />
                         <span>{edu.period}</span>
                       </div>
