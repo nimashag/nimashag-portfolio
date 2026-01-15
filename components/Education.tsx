@@ -58,24 +58,16 @@ export default function Education() {
                 className="relative"
               >
                 <div className="glass-card rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300">
-                  <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
+                  <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-8">
                     {/* Logo */}
                     <div className="relative flex-shrink-0">
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{
-                          duration: 20,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
-                        className={`absolute inset-0 rounded-full bg-gradient-to-r ${edu.color} opacity-30 blur-xl`}
-                      />
-                      <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 glass rounded-full flex items-center justify-center p-2 overflow-hidden">
+                      {/* Logo container with black background */}
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-black rounded-xl flex items-center justify-center p-4 overflow-hidden">
                         <Image
                           src={edu.logo}
                           alt={edu.institution}
-                          width={80}
-                          height={80}
+                          width={96}
+                          height={96}
                           className="object-contain"
                         />
                       </div>
