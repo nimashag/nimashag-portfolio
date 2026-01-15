@@ -97,8 +97,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating Tech Icons */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
+      {/* Floating Tech Icons - Desktop Only */}
+      <div className="absolute inset-0 z-10 pointer-events-none hidden lg:block">
         {technologies.map((tech, index) => {
           // Create a balanced spread pattern
           const positions = [
@@ -115,7 +115,7 @@ export default function Hero() {
           return (
             <motion.div
               key={index}
-              className="absolute hidden lg:block"
+              className="absolute"
               style={positions[index]}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{
@@ -170,6 +170,64 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Mobile Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="lg:hidden flex justify-center mb-12"
+        >
+          <div className="relative w-40 h-40 sm:w-48 sm:h-48">
+            {/* Animated Ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-primary-500 p-[3px]"
+            >
+              <div className="w-full h-full rounded-full bg-black" />
+            </motion.div>
+
+            {/* Profile Image */}
+            <div className="absolute inset-[3px] rounded-full overflow-hidden border-4 border-primary-500/40 shadow-2xl shadow-primary-500/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
+              <Image
+                src="/assets/img/profile2.png"
+                alt="Nimasha Gamage"
+                fill
+                className="object-cover scale-110"
+                sizes="192px"
+                priority
+              />
+              {/* Shine effect */}
+              <motion.div
+                animate={{
+                  x: ["-100%", "200%"],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 2,
+                }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
+              />
+            </div>
+
+            {/* Glow effect */}
+            <motion.div
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="absolute inset-0 bg-gradient-to-br from-primary-500/30 via-purple-500/20 to-primary-500/30 rounded-full blur-2xl -z-10"
+            />
+          </div>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <motion.div
@@ -488,12 +546,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Hidden on Mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 hidden lg:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
