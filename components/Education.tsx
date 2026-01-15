@@ -70,7 +70,7 @@ export default function Education() {
                         }}
                         className={`absolute inset-0 rounded-full bg-gradient-to-r ${edu.color} opacity-30 blur-xl`}
                       />
-                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 glass rounded-full flex items-center justify-center p-2 overflow-hidden">
+                      <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 glass rounded-full flex items-center justify-center p-2 overflow-hidden">
                         <Image
                           src={edu.logo}
                           alt={edu.institution}

@@ -233,12 +233,12 @@ export default function Hero() {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="glass-card p-3 sm:p-4 rounded-xl text-center"
+                  className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center"
                 >
-                  <div className="text-xl sm:text-2xl font-bold gradient-text">
+                  <div className="text-base sm:text-xl md:text-2xl font-bold gradient-text">
                     {stat.value}
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-400 mt-1">
+                  <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 mt-1 leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 px-2 sm:px-0"
             >
               <motion.a
                 href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
@@ -260,9 +260,9 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
-                <FileDown size={18} />
+                <FileDown size={18} className="flex-shrink-0" />
                 <span>Download CV</span>
               </motion.a>
               <motion.a
@@ -272,7 +272,7 @@ export default function Hero() {
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
+                className="group px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 rounded-xl text-white text-sm sm:text-base font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30"
               >
                 <span>Get In Touch</span>
                 <motion.span

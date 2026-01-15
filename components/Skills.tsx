@@ -70,14 +70,14 @@ export default function Skills() {
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-8 sm:mb-12" />
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 px-2">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(category)}
-                className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full font-semibold transition-all duration-300 ${
+                className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 text-xs sm:text-sm md:text-base rounded-full font-semibold transition-all duration-300 whitespace-nowrap ${
                   activeCategory === category
                     ? "bg-primary-600 text-white shadow-lg shadow-primary-600/50"
                     : "glass text-gray-300 hover:bg-white/10"
@@ -94,7 +94,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
           >
             {skillsData[activeCategory as keyof typeof skillsData].map(
               (skill, index) => (
@@ -103,13 +103,13 @@ export default function Skills() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="glass-card p-6 rounded-xl transition-all duration-300"
+                  className="glass-card p-4 sm:p-5 md:p-6 rounded-xl transition-all duration-300"
                 >
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-lg font-semibold text-white">
+                    <span className="text-base sm:text-lg font-semibold text-white">
                       {skill.name}
                     </span>
-                    <span className="text-primary-400 font-bold">
+                    <span className="text-primary-400 font-bold text-sm sm:text-base">
                       {skill.level}%
                     </span>
                   </div>

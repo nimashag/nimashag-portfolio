@@ -15,11 +15,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="glass-strong border-t border-white/10 py-8 px-4 sm:px-6 lg:px-8">
+    <footer className="glass-strong border-t border-white/10 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-4 sm:gap-6">
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-3 sm:gap-4">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={index}
@@ -28,12 +28,12 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 glass hover:bg-primary-600/20 rounded-full transition-colors duration-200"
+                className="p-2.5 sm:p-3 glass hover:bg-primary-600/20 rounded-full transition-colors duration-200"
                 aria-label={social.label}
               >
                 <social.icon
-                  size={20}
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                  size={18}
+                  className="sm:w-5 sm:h-5 text-gray-300 hover:text-primary-400 transition-colors duration-200"
                 />
               </motion.a>
             ))}

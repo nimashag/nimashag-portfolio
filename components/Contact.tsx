@@ -117,7 +117,7 @@ export default function Contact() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <input
                     type="text"
@@ -126,7 +126,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your Name"
                     required
-                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-card rounded-lg text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your Email"
                     required
-                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-card rounded-lg text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Subject"
                     required
-                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-card rounded-lg text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -159,17 +159,17 @@ export default function Contact() {
                     placeholder="Your Message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 glass-card rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200 resize-none"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 glass-card rounded-lg text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-600 transition-all duration-200 resize-none"
                   />
                 </div>
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-3 bg-primary-600 hover:bg-primary-700 rounded-lg text-white font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
+                  className="w-full px-6 sm:px-8 py-2.5 sm:py-3 bg-primary-600 hover:bg-primary-700 rounded-lg text-white text-sm sm:text-base font-semibold transition-colors duration-200 flex items-center justify-center gap-2"
                 >
                   Send Message
-                  <Send size={18} />
+                  <Send size={18} className="flex-shrink-0" />
                 </motion.button>
               </form>
             </motion.div>

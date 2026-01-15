@@ -55,9 +55,9 @@ export default function About() {
               initial={{ opacity: 0, x: -50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="relative"
+              className="relative px-4 sm:px-0"
             >
-              <div className="relative max-w-sm sm:max-w-md mx-auto">
+              <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto">
                 {/* Animated Background Elements */}
                 <motion.div
                   animate={{
@@ -72,13 +72,13 @@ export default function About() {
                 />
 
                 {/* Main Card */}
-                <div className="relative glass-card rounded-3xl p-6 sm:p-8 border-2 border-primary-500/20">
+                <div className="relative glass-card rounded-3xl p-4 sm:p-6 md:p-8 border-2 border-primary-500/20">
                   {/* Profile Image Container */}
-                  <div className="relative mx-auto mb-6">
+                  <div className="relative mx-auto mb-4 sm:mb-6">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
-                      className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto"
+                      className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto"
                     >
                       {/* Animated Ring */}
                       <motion.div
@@ -118,39 +118,39 @@ export default function About() {
                   </div>
 
                   {/* Stats Grid */}
-                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
+                      className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
                     >
-                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
                         10+
                       </div>
-                      <p className="text-[10px] sm:text-xs text-gray-400">
+                      <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
                         Projects
                       </p>
                     </motion.div>
 
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-purple-500/10 hover:border-purple-500/30 transition-all"
+                      className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-purple-500/10 hover:border-purple-500/30 transition-all"
                     >
-                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
                         6
                       </div>
-                      <p className="text-[10px] sm:text-xs text-gray-400">
+                      <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
                         Months Intern
                       </p>
                     </motion.div>
 
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="glass-card p-3 sm:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
+                      className="glass-card p-2 sm:p-3 md:p-4 rounded-xl text-center border border-primary-500/10 hover:border-primary-500/30 transition-all"
                     >
-                      <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
+                      <div className="text-lg sm:text-2xl md:text-3xl font-bold gradient-text mb-1">
                         15+
                       </div>
-                      <p className="text-[10px] sm:text-xs text-gray-400">
+                      <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-400 leading-tight">
                         Technologies
                       </p>
                     </motion.div>
