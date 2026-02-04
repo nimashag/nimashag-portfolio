@@ -11,6 +11,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
+  SiMedium,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import FloatingCube from "./3D/FloatingCube";
@@ -23,6 +24,11 @@ export default function Hero() {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/nimashagamage",
       label: "LinkedIn",
+    },
+    {
+      icon: SiMedium,
+      href: "https://medium.com/@nimashagamage",
+      label: "Medium",
     },
     { icon: Mail, href: "mailto:nimasha.piyumini@gmail.com", label: "Email" },
   ];
@@ -49,7 +55,7 @@ export default function Hero() {
 
   const stats = [
     { value: "10+", label: "Projects Completed" },
-    { value: "3+", label: "Years Experience" },
+    { value: "6", label: "Months Internship" },
     { value: "15+", label: "Technologies" },
   ];
 
@@ -238,7 +244,7 @@ export default function Hero() {
             <div className="absolute inset-[3px] rounded-full overflow-hidden border-4 border-primary-500/40 shadow-2xl shadow-primary-500/30">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
               <Image
-                src="/assets/img/profile2.png"
+                src="/assets/img/profile4.jpg"
                 alt="Nimasha Gamage"
                 fill
                 className="object-cover scale-110"
