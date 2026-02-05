@@ -6,32 +6,34 @@ import { BookOpen, ExternalLink } from "lucide-react";
 
 const articles = [
   {
-    title: "How to Build a CRUD API with Node.js, Express.js, and TypeScript",
+    title: "My Journey into Linux: From Curiosity to Practical Confidence",
     description:
-      "A step-by-step guide to building a CRUD API with modern technologies.",
-    link: "https://medium.com/@NimashaGamage/how-to-build-a-crud-api-with-node-js-express-js-and-typescript-2afa56f7d2c4",
-    category: "Backend",
+      "Linux has become a foundational technology in modern software development, cloud computing, and DevOps environments. Exploring the journey from curiosity to practical confidence with Linux.",
+    link: "https://medium.com/@NimashaGamage",
+    category: "Linux",
   },
   {
-    title: "Getting Started with Spring Boot",
+    title: "DevSecOps for Beginners: How Security Fits into a CI/CD Pipeline",
     description:
-      "An introduction to Spring Boot and creating a simple REST API.",
-    link: "https://medium.com/@NimashaGamage/getting-started-with-spring-boot-b63ed496d213",
-    category: "Backend",
+      "When I first learned about DevOps, everything felt focused on speed — faster builds, faster deployments, faster releases. But very quickly, I realized security needs to be integrated into every step of the pipeline.",
+    link: "https://medium.com/@NimashaGamage",
+    category: "DevSecOps",
   },
   {
-    title: "SQL vs NoSQL: Choosing the Right Database",
+    title:
+      "AWS IAM for Beginners — A Simple, Visual Guide to Securing Your AWS Account",
     description:
-      "Understand the key differences between SQL and NoSQL databases.",
-    link: "https://medium.com/@NimashaGamage/sql-vs-nosql-choosing-the-right-database-for-your-application-8c353f2eeb75",
-    category: "Database",
+      "Security in AWS doesn't start with firewalls or encryption — it starts with IAM. A comprehensive guide to understanding and implementing AWS Identity and Access Management.",
+    link: "https://medium.com/@NimashaGamage",
+    category: "AWS",
   },
   {
-    title: "Beginner's Guide to Node.js, Express, and TypeScript",
+    title:
+      "WSO2 Ballerina Integration with Google Calendar — Creating an OAuth Client",
     description:
-      "A beginner-friendly guide to setting up Node.js with TypeScript.",
-    link: "https://medium.com/@NimashaGamage/beginner-guide-to-node-js-express-and-typescript-setup-39301a5edcc2",
-    category: "Backend",
+      "To enable Ballerina to interact with Google Calendar, we first need to activate the Google Calendar API provided by Google's developer platform. A step-by-step integration guide.",
+    link: "https://medium.com/@NimashaGamage",
+    category: "Integration",
   },
 ];
 

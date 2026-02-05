@@ -19,7 +19,7 @@ export default function Experience() {
       location: "Colombo, Sri Lanka",
       logo: "/assets/img/wso2-logo.png",
       description:
-        "Contributed to enterprise-grade software solutions, working with cutting-edge technologies and collaborating with experienced engineers.",
+        "Contributed to enterprise-grade software solutions, working with cutting-edge technologies and collaborating with experienced engineers. Also actively contributed to WSO2 open source projects.",
       achievements: [
         "Developed and maintained enterprise software components",
         "Collaborated with cross-functional teams",

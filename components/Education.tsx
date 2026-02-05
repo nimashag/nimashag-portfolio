@@ -16,7 +16,7 @@ export default function Education() {
       institution: "Sri Lanka Institute of Information Technology (SLIIT)",
       degree:
         "BSc (Hons) in Information Technology Specializing in Software Engineering",
-      period: "Currently in 3rd Year, 2nd Semester",
+      period: "Currently in 4th Year, 2nd Semester",
       logo: "/assets/img/uni.png",
       color: "from-blue-500 to-cyan-500",
     },

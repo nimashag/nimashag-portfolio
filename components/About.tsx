@@ -177,25 +177,20 @@ export default function About() {
                 <span className="text-primary-400 font-semibold">
                   Nimasha Gamage
                 </span>
-                , an undergraduate at SLIIT, pursuing a BSc (Hons) in
-                Information Technology with a specialization in Software
-                Engineering. I am deeply passionate about crafting innovative
-                software solutions and continuously advancing my skills in
-                coding, problem-solving, and project management.
+                , an undergraduate at SLIIT pursuing a BSc (Hons) in Information
+                Technology with a specialization in Software Engineering. I’m
+                passionate about building innovative software solutions and
+                continuously improving my skills in coding, problem-solving, and
+                modern development practices.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Currently, I am seeking an internship where I can contribute to
-                meaningful projects, collaborate with talented professionals,
-                and gain hands-on experience in the tech industry. I am eager to
-                refine my technical expertise while immersing myself in dynamic,
-                team-oriented environments that foster growth and innovation.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                My long-term goal is to become a versatile developer who creates
-                solutions that not only drive technological innovation but also
-                make a positive impact on society. With a mindset grounded in
-                dedication, curiosity, and lifelong learning, I aspire to leave
-                a lasting legacy in the ever-evolving world of technology.
+                I&apos;m{" "} currently seeking full-time opportunities where I can
+                contribute to impactful projects and grow as a developer. I&apos;ve{" "}
+                completed a 6-month internship as a Software Engineering Intern,
+                gaining hands-on experience in enterprise-level development.
+                Driven by curiosity and lifelong learning, my goal is to create
+                technology that delivers real-world value and positive societal
+                impact.
               </p>
 
               {/* Features */}
