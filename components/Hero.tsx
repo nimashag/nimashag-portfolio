@@ -362,6 +362,8 @@ export default function Hero() {
             >
               <motion.a
                 href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
                 whileHover={{
                   scale: 1.05,
