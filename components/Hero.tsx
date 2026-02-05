@@ -361,7 +361,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 px-2 sm:px-0"
             >
               <motion.a
-                href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
+                href="/assets/cv/CV_Nimasha_Gamage_Software_Engineer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{
