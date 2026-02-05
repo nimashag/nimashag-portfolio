@@ -364,7 +364,6 @@ export default function Hero() {
                 href="/assets/cv/CV - Nimasha Gamage - Software Engineering Intern.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 25px rgba(14, 165, 233, 0.5)",
