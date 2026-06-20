@@ -7,6 +7,23 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "ObservIQ",
+    description:
+      "ObservIQ is a smart observability platform for microservice-based applications that automates log analysis, metric discovery, alert optimization, and anomaly detection. By leveraging machine learning and intelligent monitoring techniques, it provides actionable insights that improve system visibility, reliability, and operational efficiency.",
+    image: "/assets/img/ObservIQ.png",
+    tech: [
+      "Python",
+      "NodeJs",
+      "ExpressJs",
+      "MongoDB",
+      "React Js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/nimashag/nodejs-springboot-observabilitydata-collection-app",
+    category: "Full Stack",
+  },
+  {
     title: "Hungerjet",
     description:
       "Hungerjet is a microservices-based food ordering and delivery platform supporting restaurant registration, menu and order management, user browsing and ordering, and location-based delivery. Delivery drivers manage profiles, select areas, and fulfill matching orders efficiently.",
@@ -20,7 +37,7 @@ const projects = [
       "Tailwind CSS",
     ],
     github:
-      "https://github.com/nimashag/hungerjet-microservice-docker-kubernetes",
+      "https://github.com/nimashag/hungerjet-devops-microservice",
     category: "Full Stack",
   },
   {
@@ -68,7 +85,7 @@ const projects = [
       "React Native",
       "TypeScript",
     ],
-    github: "https://github.com/vihangamallawaarachchi2001/Well-backend",
+    github: "https://github.com/nimashag/Well-backend",
     category: "Mobile",
   },
   {

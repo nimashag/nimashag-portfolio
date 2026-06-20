@@ -42,11 +42,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center text-gray-400 text-sm">
             <p className="flex items-center gap-2 justify-center">
-              © {new Date().getFullYear()} Nimasha Gamage. Made with
-              <Heart size={16} className="text-red-500 fill-red-500" />
-              by Nimasha
-            </p>
-            <p className="mt-2">All rights reserved.</p>
+              © {new Date().getFullYear()} Nimasha Gamage. All rights reserved.</p>
           </div>
         </div>
       </div>
