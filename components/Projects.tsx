@@ -103,7 +103,7 @@ const projects = [
       "A web application designed to streamline furniture management, featuring inventory, supplier, order, delivery, employee, customer complaint, and warehouse management. Spectro also includes user management and report generation to boost efficiency and enhance overall business performance.",
     image: "/assets/img/spectro.png",
     tech: ["NodeJs", "ExpressJs", "MongoDB", "ReactJs", "Bootstrap"],
-    github: "https://github.com/nimashag/Spectro-2.0",
+    github: "https://github.com/nimashag/Spectro",
     category: "Full Stack",
   },
   {
@@ -121,7 +121,7 @@ const projects = [
       "Simple Meditation App is designed to make meditation accessible to everyone. It features previews of various meditation sessions, audio playback controls, and a countdown timer, helping users focus and relax while guiding them through their meditation practice.",
     image: "/assets/img/meditation1.png",
     tech: ["Expo", "React Native", "TypeScript", "Native Wind"],
-    github: "https://github.com/nimashag/spring_bing",
+    github: "https://github.com/nimashag/simple-meditation-app-expo-react-native",
     category: "Mobile",
   },
   {
