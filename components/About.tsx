@@ -97,7 +97,7 @@ export default function About() {
                       <div className="absolute inset-[2px] rounded-full overflow-hidden border-4 border-primary-500/30">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
                         <Image
-                          src="/assets/img/profile2.png"
+                          src="/assets/img/profile.PNG"
                           alt="Nimasha Gamage"
                           fill
                           className="object-cover hover:scale-110 transition-transform duration-500"

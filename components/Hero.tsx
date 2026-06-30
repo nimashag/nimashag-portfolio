@@ -244,11 +244,11 @@ export default function Hero() {
             <div className="absolute inset-[3px] rounded-full overflow-hidden border-4 border-primary-500/40 shadow-2xl shadow-primary-500/30">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-purple-600/20" />
               <Image
-                src="/assets/img/profile2.png"
+                src="/assets/img/profile-removebg.png"
                 alt="Nimasha Gamage"
                 fill
-                className="object-cover scale-110"
-                sizes="192px"
+                className="object-cover scale-160"
+                sizes="250px"
                 priority
               />
               {/* Shine effect */}
@@ -519,7 +519,7 @@ export default function Hero() {
               />
 
               {/* Profile Image Container with Modern Border */}
-              <div className="absolute inset-16 flex items-center justify-center">
+              <div className="absolute inset-10 flex items-center justify-center">
                 <motion.div
                   animate={{
                     boxShadow: [
@@ -533,7 +533,7 @@ export default function Hero() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-700/15 via-purple-700/15 to-primary-700/15" />
                   <Image
-                    src="/assets/img/profile2.png"
+                    src="/assets/img/profile-removebg.png"
                     alt="Nimasha Gamage"
                     fill
                     className="object-cover scale-110"
