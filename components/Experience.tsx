@@ -17,7 +17,7 @@ export default function Experience() {
       position: "Software Engineering Intern",
       period: "6 Months",
       location: "Colombo, Sri Lanka",
-      logo: "/assets/img/wso2-logo.png",
+      logo: "/assets/img/new-wso2.png",
       description:
         "Contributed to enterprise-grade software solutions, working with cutting-edge technologies and collaborating with experienced engineers. Also actively contributed to WSO2 open source projects.",
       achievements: [
@@ -61,18 +61,18 @@ export default function Experience() {
                     {/* Left side - Company Logo & Info */}
                     <div className="flex flex-col items-center gap-6 lg:w-1/3">
                       {/* Logo */}
-                      <div className="relative group">
+                      <div className="relative group w-[160px] h-[160px]">
                         {/* Subtle glow effect */}
                         <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-md group-hover:opacity-100 opacity-70 transition duration-300"></div>
 
                         {/* Logo container */}
-                        <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-gray-900 to-black rounded-2xl flex items-center justify-center p-6 border border-orange-500/20 group-hover:border-orange-500/40 transition-all duration-300">
+                        <div className="relative w-full h-full overflow-hidden bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-orange-500/20 group-hover:border-orange-500/40 transition-all duration-300">
                           <Image
                             src={exp.logo}
                             alt={exp.company}
-                            width={160}
-                            height={160}
-                            className="object-contain"
+                            fill
+                            sizes="160px"
+                            className="object-cover object-center"
                           />
                         </div>
                       </div>
